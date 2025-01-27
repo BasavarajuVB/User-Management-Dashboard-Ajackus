@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif, 'Ubuntu','Fira Sans';
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}

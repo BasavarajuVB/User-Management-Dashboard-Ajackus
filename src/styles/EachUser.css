@@ -1,0 +1,134 @@
+.user-item {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 80px;
+  position: relative;
+  background: #ffffff;
+}
+
+.user-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+
+#userId {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.user-item td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.4;
+  transition: background-color 0.2s ease;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
+}
+
+#edit {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+#edit:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+#delete {
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+#delete:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  color: #ffffff;
+}
+
+/* Adding responsiveness */
+@media screen and (max-width: 768px) {
+  .user-item {
+    height: auto;
+    min-height: 70px;
+  }
+
+  .user-item td {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  
+  .action-buttons {
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 0;
+  }
+  
+  #edit, #delete {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 70px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #edit, #delete {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .user-item td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
