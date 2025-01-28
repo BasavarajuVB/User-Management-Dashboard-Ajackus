@@ -4,7 +4,7 @@ import "../styles/EachUser.css";
 const EachUser = ({ user, onEdit, onDelete }) => {
   return (
     <tr className="user-item ">
-      <td className="cell-id" id='userId'>{user.id}</td>
+      <td className="cell-id text-dark" id='userId'>{user.id}</td>
       <td className="cell-text">{user.name}</td>
       <td className="cell-email">{user.email}</td>
       <td className="cell-text">{user.username}</td>
